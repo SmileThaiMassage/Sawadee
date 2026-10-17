@@ -74,6 +74,10 @@
     transition:transform .3s, box-shadow .3s;
   }
   .cta:hover{transform:translateY(-3px);box-shadow:0 14px 34px rgba(217,164,79,.5);}
+  .orario-hero{
+    margin-top:26px;font-size:16px;letter-spacing:.1em;color:var(--gold-light);
+  }
+  .orario-hero strong{color:var(--gold);}
 
   /* ---------- SEZIONI ---------- */
   section{padding:38px 6%;max-width:1200px;margin:0 auto;}
@@ -146,9 +150,39 @@
     pointer-events:none;
   }
   .listino-contenuto{
-    min-height:340px;
     border-radius:14px;
-    display:flex;align-items:center;justify-content:center;
+    display:flex;flex-direction:column;gap:26px;
+    color:var(--cream);
+  }
+  .orario-pill{
+    align-self:center;
+    padding:9px 26px;border-radius:40px;
+    background:rgba(0,0,0,.35);
+    border:1px solid rgba(217,164,79,.5);
+    color:var(--gold-light);font-size:15px;letter-spacing:.08em;
+  }
+  .orario-pill strong{color:var(--gold);}
+  .cat h4{
+    color:var(--gold);font-size:19px;letter-spacing:.12em;text-transform:uppercase;
+    margin-bottom:6px;
+  }
+  .cat-sub{font-size:13px;font-style:italic;color:rgba(245,234,211,.75);margin-bottom:12px;}
+  .riga{
+    display:flex;align-items:baseline;gap:10px;
+    padding:7px 0;font-size:16px;
+  }
+  .riga span{color:var(--cream);}
+  .riga i{
+    flex:1;border-bottom:1px dotted rgba(217,164,79,.45);
+    transform:translateY(-4px);
+  }
+  .riga b{color:var(--gold-light);font-weight:bold;white-space:nowrap;font-size:17px;}
+  .riga.due-col{justify-content:space-between;}
+  .riga.due-col b{margin-left:24px;}
+  .due-col-wrap{display:flex;flex-wrap:wrap;justify-content:space-between;}
+  .due-col-wrap .riga.due-col{width:100%;}
+  @media(min-width:640px){
+    .due-col-wrap .riga.due-col{width:48%;}
   }
 
   /* Gallery extra — rimossa */
@@ -162,6 +196,13 @@
     border-radius:10px;padding:44px 38px;
   }
   .dove h3{color:var(--gold);font-size:22px;margin-bottom:16px;}
+  .orario-info{
+    margin-top:18px;padding:14px 20px;
+    background:rgba(0,0,0,.28);
+    border:1px solid rgba(217,164,79,.45);border-radius:10px;
+    font-size:15px;color:var(--gold-light);line-height:1.6;
+  }
+  .orario-info strong{color:var(--gold);font-size:19px;letter-spacing:.06em;}
   .dove p{margin-bottom:14px;font-size:16px;}
   .dove .indirizzo{font-size:19px;color:var(--gold-light);}
   .mappa{
