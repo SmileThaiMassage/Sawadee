@@ -196,8 +196,12 @@
   .wa-float:hover{transform:scale(1.1);}
   .wa-float svg{width:34px;height:34px;fill:#fff;}
 
-  .fade-in{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease;}
-  .fade-in.visible{opacity:1;transform:none;}
+  /* fade-in solo quando JS attivo: di default le sezioni sono sempre visibili */
+  .anim .fade-in{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease;}
+  .anim .fade-in.visible{opacity:1;transform:none;}
+  @media (prefers-reduced-motion:reduce){
+    .anim .fade-in{opacity:1;transform:none;transition:none;}
+  }
 
   /* ---------- OVERRIDE MOBILE (sempre in fondo) ---------- */
   @media(max-width:760px){
