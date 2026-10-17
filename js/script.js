@@ -23,3 +23,11 @@
       });
     });
   }
+
+  // Link "Home": scroll esplicito all'inizio pagina (affidabile su ogni browser)
+  document.querySelectorAll('a[href="#top"]').forEach(a=>{
+    a.addEventListener('click', (ev)=>{
+      ev.preventDefault();
+      window.scrollTo({top:0, behavior:'smooth'});
+    });
+  });
