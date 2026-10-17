@@ -34,6 +34,32 @@
   .hamburger{display:none;}
   .menu-mobile{display:none;}
 
+  /* Selettore lingua: elemento indipendente dalla nav (sempre visibile, anche su mobile) */
+  .lang-switch{
+    position:fixed;top:22px;left:50%;transform:translateX(-50%);
+    z-index:210;
+    display:flex;gap:4px;
+    padding:4px;border-radius:30px;
+    background:rgba(0,0,0,.3);
+    border:1px solid rgba(217,164,79,.4);
+  }
+  .lang-switch button{
+    padding:6px 13px;border:none;border-radius:24px;cursor:pointer;
+    background:transparent;color:var(--gold-light);
+    font-family:inherit;font-size:13px;letter-spacing:.06em;
+    transition:background .3s,color .3s;
+  }
+  .lang-switch button:hover{color:var(--gold);}
+  .lang-switch button.attivo{
+    background:linear-gradient(135deg,var(--gold-light),var(--gold));
+    color:#2e2410;font-weight:bold;
+  }
+  /* nascondi la barra in cima che Google Translate aggiunge alla pagina */
+  .goog-te-banner-frame,.goog-te-balloon-frame{display:none!important;}
+  body{top:0!important;}
+  .skiptranslate iframe{display:none!important;}
+  .goog-te-gadget{font-size:0!important;}
+
   /* ---------- HERO ---------- */
   .hero{
     min-height:88vh;
@@ -252,9 +278,21 @@
     .anim .fade-in{opacity:1;transform:none;transition:none;}
   }
 
+  /* nav più compatta su schermi medi, così il selettore centrato non tocca i link */
+  @media(max-width:920px){
+    nav ul{gap:16px;}
+    nav a{font-size:13px;letter-spacing:.08em;}
+  }
+
   /* ---------- OVERRIDE MOBILE (sempre in fondo) ---------- */
   @media(max-width:760px){
     nav{display:none;}
+    .lang-switch{
+      top:16px;left:16px;transform:none;
+      background:rgba(30,36,24,.75);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
+      box-shadow:0 6px 18px rgba(0,0,0,.4);
+    }
+    .lang-switch button{padding:8px 11px;font-size:12px;}
     .hamburger{
       display:flex;
       position:fixed;top:16px;right:16px;z-index:210;
