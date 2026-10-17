@@ -164,6 +164,10 @@
     background:rgba(0,0,0,.35);
     border:1px solid rgba(217,164,79,.5);
     color:var(--gold-light);font-size:15px;letter-spacing:.08em;
+    white-space:nowrap;
+  }
+  @media(max-width:480px){
+    .orario-pill{font-size:12px;letter-spacing:.02em;padding:8px 16px;}
   }
   .orario-pill strong{color:var(--gold);}
   .cat h4{
