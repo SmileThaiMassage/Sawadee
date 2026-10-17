@@ -5,6 +5,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Smile — Thai Massaggi · Roma · Via del Vantaggio 41</title>
 <meta name="description" content="Smile Thai Massaggi: autentico massaggio thailandese nel cuore di Roma, tra Piazza di Spagna e Piazza del Popolo. Via del Vantaggio 41.">
+<!-- Torna sempre all'italiano: cancella i cookie di traduzione PRIMA che il widget di Google si inizializzi (salvo scelta diversa già salvata) -->
+<script>
+(function(){
+  try{
+    var p = localStorage.getItem('smileLingua');
+    if(!p || p === 'it'){
+      var h = location.hostname, vs = [';path=/'];
+      if(h){ vs.push(';path=/;domain=' + h); vs.push(';path=/;domain=.' + h); }
+      for(var i = 0; i < vs.length; i++){
+        document.cookie = 'googtrans=;expires=Thu, 01 Jan 1970 00:00:00 UTC' + vs[i];
+      }
+    }
+  }catch(e){}
+})();
+</script>
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -19,6 +34,11 @@
     <li><a href="#dove-siamo">Dove Siamo</a></li>
   </ul>
 </nav>
+<div class="lang-switch" id="langSwitch">
+  <button data-lang="it" class="attivo">IT</button>
+  <button data-lang="en">EN</button>
+  <button data-lang="th">ไทย</button>
+</div>
 <button class="hamburger" id="hamburger" aria-label="Apri menu" aria-expanded="false">
   <span></span><span></span><span></span>
 </button>
@@ -214,6 +234,15 @@
   <p>© 2026 Smile Thai Massaggi — Estetica del benessere</p>
   <a class="wa-footer" href="https://wa.me/393792984717" target="_blank" rel="noopener">Scrivici su WhatsApp →</a>
 </footer>
+
+<!-- Google Translate (motore nascosto, usato dai pulsanti lingua) -->
+<div id="google_translate_element" style="display:none"></div>
+<script>
+function googleTranslateElementInit(){
+  new google.translate.TranslateElement({pageLanguage:'it',includedLanguages:'en,th',autoDisplay:false},'google_translate_element');
+}
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 <!-- Pulsante WhatsApp flottante -->
 <a class="wa-float" href="https://wa.me/393792984717?text=Buongiorno%2C%20vorrei%20informazioni%20sui%20vostri%20massaggi."
