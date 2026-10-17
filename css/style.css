@@ -1,7 +1,7 @@
 
   :root{
-    --brown:#4e5d47;
-    --brown-2:#39452f;
+    --brown:#63745a;
+    --brown-2:#4c5a41;
     --gold:#d9a44f;
     --gold-light:#f0d9a8;
     --cream:#f5ead3;
@@ -22,7 +22,7 @@
     position:fixed;top:0;left:0;right:0;z-index:100;
     display:flex;align-items:center;justify-content:space-between;
     padding:14px 5%;
-    background:rgba(45,55,40,.92);
+    background:rgba(60,72,52,.92);
     backdrop-filter:blur(8px);
     border-bottom:1px solid rgba(217,164,79,.35);
   }
@@ -41,7 +41,7 @@
     text-align:center;
     background:
       radial-gradient(ellipse at 50% 0%, rgba(217,164,79,.16), transparent 55%),
-      linear-gradient(180deg, #333d2b 0%, var(--brown) 70%);
+      linear-gradient(180deg, #414e36 0%, var(--brown) 70%);
     padding:110px 20px 60px;
   }
   .hero img.logo{
@@ -67,7 +67,7 @@
   .cta{
     display:inline-block;margin-top:6px;
     padding:15px 44px;
-    color:#333d2b;font-size:16px;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;
+    color:#414e36;font-size:16px;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;
     background:linear-gradient(135deg,var(--gold-light),var(--gold) 60%,#b8863b);
     border-radius:40px;
     box-shadow:0 8px 26px rgba(217,164,79,.35);
@@ -100,7 +100,7 @@
   .servizi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;}
   @media(max-width:860px){.servizi-grid{grid-template-columns:1fr;}}
   .card{
-    background:linear-gradient(180deg,var(--brown-2),#333d2b);
+    background:linear-gradient(180deg,var(--brown-2),#414e36);
     border:1px solid rgba(217,164,79,.3);
     border-radius:10px;overflow:hidden;
     transition:transform .35s, border-color .35s;
@@ -131,7 +131,7 @@
   .listino-cornice{
     background:
       radial-gradient(ellipse at 50% 0%, rgba(217,164,79,.10), transparent 60%),
-      linear-gradient(180deg, #42513a 0%, #39452f 100%);
+      linear-gradient(180deg, #4f5f45 0%, #4c5a41 100%);
     border:2px solid var(--gold);
     border-radius:26px;
     padding:64px 40px 40px;
@@ -157,7 +157,7 @@
   .dove{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:stretch;}
   @media(max-width:860px){.dove{grid-template-columns:1fr;}}
   .dove .info{
-    background:linear-gradient(180deg,var(--brown-2),#333d2b);
+    background:linear-gradient(180deg,var(--brown-2),#414e36);
     border:1px solid rgba(217,164,79,.3);
     border-radius:10px;padding:44px 38px;
   }
@@ -176,7 +176,7 @@
   footer{
     text-align:center;padding:44px 6% 110px;
     border-top:1px solid rgba(217,164,79,.3);
-    background:#262e1f;
+    background:#323d29;
   }
   footer img{height:70px;border-radius:50%;border:1px solid rgba(217,164,79,.5);margin-bottom:16px;}
   footer p{font-size:14px;color:rgba(232,220,196,.7);}
@@ -201,6 +201,14 @@
 
   /* ---------- OVERRIDE MOBILE (sempre in fondo) ---------- */
   @media(max-width:760px){
+    nav{
+      position:absolute;top:0;left:0;right:0;
+      background:transparent;backdrop-filter:none;-webkit-backdrop-filter:none;
+      border-bottom:none;
+    }
+    nav img{height:46px;box-shadow:0 4px 14px rgba(0,0,0,.4);}
+    .hamburger{background:rgba(24,20,10,.55);backdrop-filter:blur(4px);}
+    .menu-mobile{top:0;padding-top:76px;}
     .hamburger{display:flex;flex-direction:column;justify-content:center;gap:6px;
       width:44px;height:44px;padding:10px;cursor:pointer;
       background:transparent;border:1px solid rgba(217,164,79,.5);border-radius:8px;}
@@ -209,9 +217,9 @@
     .hamburger.aperto span:nth-child(2){opacity:0;}
     .hamburger.aperto span:nth-child(3){transform:translateY(-8px) rotate(-45deg);}
     .menu-mobile{
-      position:fixed;top:81px;left:0;right:0;z-index:99;
+      position:fixed;top:0;left:0;right:0;z-index:99;
       display:flex;flex-direction:column;
-      background:rgba(38,46,31,.97);backdrop-filter:blur(10px);
+      background:rgba(50,61,42,.97);backdrop-filter:blur(10px);
       border-bottom:1px solid rgba(217,164,79,.45);
       max-height:0;overflow:hidden;transition:max-height .4s ease;
     }
@@ -222,7 +230,7 @@
       border-top:1px solid rgba(217,164,79,.18);
     }
     .menu-mobile a:active,.menu-mobile a:hover{color:var(--gold);}
-    .menu-mobile .menu-wa{color:#333d2b;text-align:center;margin:14px 8% 20px;padding:14px;
+    .menu-mobile .menu-wa{color:#414e36;text-align:center;margin:14px 8% 20px;padding:14px;
       background:linear-gradient(135deg,var(--gold-light),var(--gold) 60%,#b8863b);
       border-radius:40px;border:none;font-weight:bold;}
     .hero{min-height:auto;padding:110px 20px 56px;}
